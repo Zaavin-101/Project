@@ -10,14 +10,14 @@ class DatabaseSeeder extends Seeder
 {
 public function run(): void
 {
-// 1. Buat data kategori master secara manual
+
 $cat1 = Category::create(['name' => 'Pemrograman & IT', 'slug' => 'pemrograman-it']);
 $cat2 = Category::create(['name' => 'Novel & Fiksi', 'slug' => 'novel-fiksi']);
 $cat3 = Category::create(['name' => 'Sains & Matematika', 'slug' =>
 'sains-matematika']);
-// 2. Generate 15 Anggota dummy menggunakan Factory
+
 Member::factory(15)->create();
-// 3. Generate 30 Buku dummy menggunakan Factory
+
 Book::factory(30)->create();
 
 // 4. Simulasi Transaksi Peminjaman Sederhana
